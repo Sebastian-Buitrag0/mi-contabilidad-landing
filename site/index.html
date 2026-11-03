@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es-CO" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi contabilidad · Tu plata, en orden</title>
+  <meta name="description" content="Mi contabilidad convierte las notificaciones de tus bancos y billeteras en movimientos claros. Local, privada y hecha para el 4x1000 colombiano.">
+  <meta name="theme-color" content="#062b21">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mi contabilidad · Tu plata, en orden">
+  <meta property="og:description" content="Cada notificación de tu banco, convertida en un movimiento claro. Sin digitar y sin cuenta en la nube.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="estilos.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="marca" href="#inicio" aria-label="Mi contabilidad, inicio">
+        <img src="assets/logo.png" alt="" width="38" height="38">
+        <span>Mi contabilidad</span>
+      </a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#privacidad">Privacidad</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="nav-github" href="https://github.com/Sebastian-Buitrag0" target="_blank" rel="noopener noreferrer">
+          GitHub
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Tu plata,<br><span class="acento">en orden.</span></h1>
+          <p class="lead">Cada notificación de tu banco se convierte en un movimiento claro. Sin digitar, sin cuenta en la nube y sin perderle la pista al 4x1000.</p>
+          <div class="acciones">
+            <a class="boton boton-principal" href="#como-funciona">
+              Ver cómo funciona
+              <svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="boton boton-secundario" href="https://github.com/Sebastian-Buitrag0" target="_blank" rel="noopener noreferrer">El proyecto en GitHub</a>
+          </div>
+          <p class="nota">Android · pesos colombianos · hora de Bogotá</p>
+        </div>
+
+        <div class="hero-recibo">
+          <div class="ranura" aria-hidden="true"></div>
+          <div class="recibo" aria-label="Ejemplo de una notificación convertida en movimiento">
+            <div class="recibo-cabecera">
+              <span>MI CONTABILIDAD</span>
+              <span>BOGOTÁ · 12:04</span>
+            </div>
+
+            <div class="recibo-titulo">
+              <span>BANDEJA</span>
+              <span class="etiqueta-pendientes">3 pendientes</span>
+            </div>
+
+            <div class="demo-switch" role="tablist" aria-label="Ver la notificación o el movimiento">
+              <button id="tab-noti" role="tab" aria-selected="true" aria-controls="panel-noti" data-vista="notificacion">Notificación</button>
+              <button id="tab-mov" role="tab" aria-selected="false" aria-controls="panel-mov" data-vista="movimiento" tabindex="-1">Movimiento</button>
+            </div>
+
+            <div id="panel-noti" class="demo-panel" role="tabpanel" aria-labelledby="tab-noti" data-panel="notificacion">
+              <div class="noti-app">
+                <span class="noti-icono" aria-hidden="true">N</span>
+                <strong>Nequi</strong>
+                <span class="noti-hora">ahora</span>
+              </div>
+              <p class="noti-texto">“Compraste $38.900 en Rappi con tu tarjeta •1234.”</p>
+              <p class="demo-pie">TEXTO CRUDO · SIN INTERPRETAR</p>
+            </div>
+
+            <div id="panel-mov" class="demo-panel" role="tabpanel" aria-labelledby="tab-mov" data-panel="movimiento" hidden>
+              <div class="mov-fila">
+                <span class="categoria">Comida</span>
+                <span class="demo-pie">HOY · 12:04</span>
+              </div>
+              <div class="mov-principal">
+                <strong>Rappi</strong>
+                <span class="monto">−$38.900</span>
+              </div>
+              <div class="mov-meta">
+                <span>Nequi •1234</span>
+                <span class="estado">CONFIRMADO</span>
+              </div>
+              <div class="mov-hijo">
+                <span class="punto-oro" aria-hidden="true"></span>
+                <span>4x1000 estimado</span>
+                <span class="monto-oro">−$156</span>
+              </div>
+            </div>
+
+            <ul class="asientos">
+              <li>
+                <div class="asiento-linea"><span>Nómina</span><span class="monto ingreso">+$2.500.000</span></div>
+                <div class="asiento-meta"><span>Ingreso</span><span>BBVA •8891</span></div>
+              </li>
+              <li>
+                <div class="asiento-linea"><span>Arriendo</span><span class="monto">−$1.200.000</span></div>
+                <div class="asiento-meta"><span>Vivienda</span><span>Nequi •1234</span></div>
+              </li>
+              <li>
+                <div class="asiento-linea"><span>Café</span><span class="monto">−$8.500</span></div>
+                <div class="asiento-meta"><span>Comida</span><span>Efectivo</span></div>
+              </li>
+            </ul>
+
+            <div class="recibo-total">
+              <span>Disponible este mes</span>
+              <div class="total-derecha">
+                <strong>$1.252.444</strong>
+                <span class="sello" aria-hidden="true">AL DÍA</span>
+              </div>
+            </div>
+            <div class="recibo-pie">
+              <span>DATOS DE EJEMPLO</span>
+              <span>4X1000 INCLUIDO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fuentes" aria-label="Apps que la app puede escuchar">
+      <div class="wrap fuentes-inner">
+        <span class="fuentes-label">ESCUCHA NOTIFICACIONES DE</span>
+        <ul class="fuentes-lista">
+          <li>Nequi</li>
+          <li>BBVA</li>
+          <li>Google Wallet</li>
+          <li>Pibank</li>
+          <li>RappiCard</li>
+          <li>y el parser genérico</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="problema" id="problema">
+      <div class="wrap">
+        <div class="problema-cabeza">
+          <h2>La notificación llega.<br><span>Tú no haces nada.</span></h2>
+          <p>La app reconoce el monto, el comercio, la cuenta y el tipo. Si no está segura, la deja pendiente con tres categorías sugeridas.</p>
+        </div>
+
+        <div class="comparacion">
+          <div class="captura">
+            <div class="captura-app">
+              <span class="noti-icono" aria-hidden="true">N</span>
+              <div><strong>Nequi</strong><span>ahora</span></div>
+            </div>
+            <p>“Compraste $38.900 en Rappi con tu tarjeta •1234.”</p>
+            <span class="demo-pie">LO QUE LLEGA AL TELÉFONO</span>
+          </div>
+
+          <svg class="flecha" width="54" height="24" viewBox="0 0 54 24" fill="none" aria-hidden="true">
+            <path d="M2 12h48m-8-7 8 7-8 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <div class="interpretado">
+            <div class="interpretado-cabeza">
+              <span class="mono">MOVIMIENTO</span>
+              <span class="mono">HOY · 12:04</span>
+            </div>
+            <dl>
+              <div><dt>Monto</dt><dd class="monto">$38.900</dd></div>
+              <div><dt>Comercio</dt><dd>Rappi</dd></div>
+              <div><dt>Cuenta</dt><dd>Nequi •1234</dd></div>
+              <div><dt>Tipo</dt><dd>Gasto</dd></div>
+            </dl>
+            <div class="sugerencias" aria-label="Categorías sugeridas">
+              <span class="categoria">Comida</span>
+              <span class="categoria categoria-suave">Mercado</span>
+              <span class="categoria categoria-suave">Otros</span>
+            </div>
+            <p class="interpretado-pie">Tú confirmas, o una regla lo hace por ti.</p>
+          </div>
+        </div>
+
+        <p class="nota-pie">Dedupe: el mismo monto, cuenta y comercio dentro de 2 minutos se cuenta una sola vez, aunque llegue por dos apps.</p>
+      </div>
+    </section>
+
+    <section class="funciones" id="funciones">
+      <div class="wrap">
+        <div class="funciones-cabeza">
+          <h2>Hecha para la plata<br><span>como se mueve aquí.</span></h2>
+        </div>
+
+        <div class="asientos-lista">
+          <article class="asiento">
+            <span class="asiento-label">4X1000</span>
+            <div class="asiento-cuerpo">
+              <h3>El 4x1000, sin sorpresas.</h3>
+              <p>En las cuentas que lo cobran, cada gasto o traslado crea un hijo estimado del 0,4 %, redondeado al peso. Cuando llega el cargo real del banco, reemplaza al estimado. Nunca se duplican.</p>
+              <div class="formula" aria-label="Ejemplo: 38.900 por 0,4 por ciento es 156 pesos">
+                <span>$38.900</span><span class="formula-signo">×</span><span>0,4 %</span><span class="formula-signo">=</span><span class="oro">$156</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="asiento">
+            <span class="asiento-label">MES</span>
+            <div class="asiento-cuerpo">
+              <h3>Tu mes empieza cuando te pagan.</h3>
+              <p>Si tu día de pago es el 28, un gasto del 29 cuenta para el mes siguiente. Los presupuestos y las metas siguen tu calendario, no el del banco.</p>
+            </div>
+          </article>
+
+          <article class="asiento">
+            <span class="asiento-label">REGLAS</span>
+            <div class="asiento-cuerpo">
+              <h3>Corrige una vez. La app aprende.</h3>
+              <p>Al cambiar la categoría de un movimiento, puedes crear una regla para ese comercio. Si quieres, la próxima vez se confirma sola; si no, queda pendiente en la bandeja.</p>
+            </div>
+          </article>
+
+          <article class="asiento">
+            <span class="asiento-label">SALDOS</span>
+            <div class="asiento-cuerpo">
+              <h3>Saldos que cuadran.</h3>
+              <p>Saldo inicial + ingresos − gastos ± traslados. Si el banco dice otra cosa, un botón crea el ajuste por la diferencia.</p>
+              <div class="formula formula-larga" aria-label="Fórmula del saldo por cuenta">
+                <span>inicial</span><span class="formula-signo">+</span><span>ingresos</span><span class="formula-signo">−</span><span>gastos</span><span class="formula-signo">±</span><span>traslados</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="asiento">
+            <span class="asiento-label">SHEETS</span>
+            <div class="asiento-cuerpo">
+              <h3>Tu hoja, si la quieres.</h3>
+              <p>La sincronización con Google Sheets solo agrega filas al final, en las columnas A a D. Nunca edita ni borra lo que ya está. Si no la usas, no pasa nada.</p>
+            </div>
+          </article>
+
+          <article class="asiento">
+            <span class="asiento-label">OFFLINE</span>
+            <div class="asiento-cuerpo">
+              <h3>Hecha para el metro.</h3>
+              <p>Todo vive en SQLite. La app abre, calcula y registra sin señal. El Sheet y la réplica son extras, no requisitos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="como" id="como-funciona">
+      <div class="wrap">
+        <div class="como-cabeza">
+          <h2>De ruido a registro<br><span>en tres pasos.</span></h2>
+          <p>El servicio de Android captura la notificación. Dart la entiende y la guarda. Tú solo revisas lo que la app no pudo confirmar sola.</p>
+        </div>
+
+        <ol class="pasos">
+          <li>
+            <span class="paso-numero">01</span>
+            <h3>Llega.</h3>
+            <p>El teléfono guarda la notificación en una cola local. Nada se envía a un servidor.</p>
+          </li>
+          <li>
+            <span class="paso-numero">02</span>
+            <h3>Se entiende.</h3>
+            <p>Un parser por app extrae monto, comercio, últimos 4 y tipo. El dedupe evita el mismo gasto dos veces.</p>
+          </li>
+          <li>
+            <span class="paso-numero">03</span>
+            <h3>Se ordena.</h3>
+            <p>Confirmas o una regla lo hace. El saldo, el presupuesto y el 4x1000 se actualizan.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="privacidad" id="privacidad">
+      <div class="wrap privacidad-grid">
+        <div class="privacidad-copy">
+          <h2>Tu teléfono es<br><span>la base de datos.</span></h2>
+          <p>Mi contabilidad no necesita una cuenta, no muestra anuncios y no manda tus notificaciones a un servidor. Lo que llega se queda en SQLite.</p>
+          <ul class="privacidad-lista">
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin cuenta</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin anuncios</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin analítica</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Exporta CSV</li>
+          </ul>
+          <p class="privacidad-nota">Si algún día activas el Sheet o la réplica, tú eliges qué sale. Por defecto, nada.</p>
+        </div>
+
+        <div class="diagrama" aria-label="Diagrama: los datos viven en el teléfono; la nube es opcional">
+          <div class="telefono">
+            <img src="assets/logo.png" alt="" width="42" height="42">
+            <span class="mono">TU TELÉFONO</span>
+            <strong>SQLite</strong>
+            <span class="telefono-detalle">movimientos · cuentas · reglas</span>
+            <span class="telefono-estado">FUNCIONA SIN SEÑAL</span>
+          </div>
+          <div class="conexion" aria-hidden="true">
+            <span></span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="m3 13 10-10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span></span>
+          </div>
+          <div class="nube">
+            <span class="mono">NUBE OPCIONAL</span>
+            <strong>Google Sheets</strong>
+            <strong>PostgreSQL</strong>
+            <span class="nube-estado">DESCONECTADA POR DEFECTO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tecnologia" id="tecnologia">
+      <div class="wrap">
+        <div class="tecnologia-cabeza">
+          <h2>Hecha con herramientas<br><span>que ya conoces.</span></h2>
+          <p>La app es Flutter con Drift. La réplica opcional es .NET 10 con PostgreSQL y se levanta con Docker Compose. El Sheet es una integración aparte, también opcional.</p>
+        </div>
+        <ul class="tecnologia-lista">
+          <li><span class="mono">APP</span><strong>Flutter + Drift</strong><span>Android · SQLite local</span></li>
+          <li><span class="mono">RÉPLICA</span><strong>.NET 10 + PostgreSQL</strong><span>Autoalojada · token por dispositivo</span></li>
+          <li><span class="mono">EMPAQUE</span><strong>Docker Compose</strong><span>Un comando para levantarla</span></li>
+        </ul>
+        <a class="enlace-proyecto" href="https://github.com/Sebastian-Buitrag0" target="_blank" rel="noopener noreferrer">
+          Ver el proyecto en GitHub
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="preguntas" id="preguntas">
+      <div class="wrap">
+        <h2>Lo que suele preguntarse.</h2>
+        <div class="faq">
+          <details open>
+            <summary>¿Necesito internet para usarla?</summary>
+            <p>No. La app funciona sin conexión y guarda todo en el teléfono. Solo necesitas internet si activas Google Sheets o la réplica opcional.</p>
+          </details>
+          <details>
+            <summary>¿Lee mis SMS?</summary>
+            <p>No. Solo lee las notificaciones que las apps de tu banco o billetera muestran en el teléfono. Los SMS no se tocan.</p>
+          </details>
+          <details>
+            <summary>¿Qué apps reconoce?</summary>
+            <p>Nequi, BBVA, Google Wallet, Pibank y RappiCard tienen parser propio. Las demás pasan por un parser genérico. Si algo no coincide, puedes corregir la categoría a mano.</p>
+          </details>
+          <details>
+            <summary>¿Dónde quedan mis datos?</summary>
+            <p>En una base SQLite dentro del teléfono. Puedes exportar un CSV cuando quieras. La nube es opcional y, si la activas, tú decides qué sale.</p>
+          </details>
+          <details>
+            <summary>¿Cómo la instalo?</summary>
+            <p>Hoy es un proyecto personal de Android: se compila desde el repositorio de Flutter. No hay descarga pública en tiendas.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa si cierro la app?</summary>
+            <p>Las notificaciones quedan en una cola local y se procesan cuando vuelves a abrirla. No hay un motor Flutter en segundo plano.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cierre">
+      <div class="wrap cierre-grid">
+        <div>
+          <h2>Menos ruido.<br><span>Más claridad.</span></h2>
+          <p>Tus notificaciones ya cuentan lo que gastaste. Mi contabilidad las convierte en un registro que sí puedes leer.</p>
+        </div>
+        <div class="cierre-acciones">
+          <a class="boton boton-verde" href="https://github.com/Sebastian-Buitrag0" target="_blank" rel="noopener noreferrer">Ver el proyecto en GitHub</a>
+          <a class="enlace-simple" href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="wrap pie-inner">
+      <div class="pie-marca">
+        <img src="assets/logo.png" alt="" width="32" height="32">
+        <span>Mi contabilidad</span>
+      </div>
+      <nav class="pie-nav" aria-label="Pie de página">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#privacidad">Privacidad</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <p>Hecho en Colombia · COP · <span id="anio">2026</span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+services:
+  landing:
+    build: .
+    container_name: mi-contabilidad-landing
+    restart: unless-stopped
+    ports:
+      - "${LANDING_PORT:-8081}:80"
