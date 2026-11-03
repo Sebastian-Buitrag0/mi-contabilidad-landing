@@ -7,6 +7,12 @@ asientos legibles. El campo es verde bosque; el recibo es crema; el dorado marca
 4x1000 y el lima confirma. La página se lee como un libro mayor contemporáneo, no como una pila de
 tarjetas.
 
+## Alcance
+
+La página habla únicamente de lo que la app hace por la persona: ordenar sus gastos, entender el
+4x1000, cuadrar saldos y cuidar sus datos. No muestra stack, servidores, bases de datos ni
+repositorios; esos detalles viven en la documentación de desarrollo.
+
 ## Color
 
 | Token | Hex | Uso |
