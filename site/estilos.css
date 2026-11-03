@@ -139,8 +139,7 @@ dl {
 .asiento-label,
 .paso-numero,
 .recibo-cabecera,
-.recibo-titulo,
-.nav-github {
+.recibo-titulo {
   font-family: var(--mono);
   text-transform: uppercase;
 }
@@ -218,20 +217,21 @@ dl {
   color: var(--crema);
 }
 
-.nav-github {
+.nav-cta {
   display: inline-flex;
   align-items: center;
   gap: 7px;
   padding: 8px 12px;
-  border: 1px solid rgba(244, 238, 223, 0.28);
+  border: 1px solid rgba(217, 242, 122, 0.45);
   border-radius: 999px;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--crema) !important;
+  color: var(--lima) !important;
+  font-size: 13px;
+  font-weight: 600;
 }
 
-.nav-github:hover {
+.nav-cta:hover {
   border-color: var(--lima);
+  background: rgba(217, 242, 122, 0.08);
   color: var(--lima) !important;
 }
 
@@ -730,8 +730,7 @@ html.no-js .demo-panel[hidden] {
 }
 
 .problema-cabeza,
-.como-cabeza,
-.tecnologia-cabeza {
+.como-cabeza {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.65fr);
   gap: 40px;
@@ -749,7 +748,6 @@ h2 span {
 
 .problema-cabeza p,
 .como-cabeza p,
-.tecnologia-cabeza p,
 .funciones-cabeza p {
   max-width: 47ch;
   color: #b6cabf;
@@ -1187,64 +1185,6 @@ h2 span {
   letter-spacing: 0.06em;
 }
 
-.tecnologia {
-  padding: clamp(80px, 11vw, 132px) 0;
-  border-top: 1px solid var(--linea);
-  border-bottom: 1px solid var(--linea);
-  background: var(--verde-2);
-}
-
-.tecnologia-lista {
-  padding: 0;
-  border-top: 1px solid var(--linea);
-  list-style: none;
-}
-
-.tecnologia-lista li {
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr) minmax(0, 1fr);
-  gap: 24px;
-  align-items: baseline;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--linea);
-}
-
-.tecnologia-lista .mono {
-  color: var(--oro);
-  font-size: 9px;
-  letter-spacing: 0.1em;
-}
-
-.tecnologia-lista strong {
-  font-family: var(--display);
-  font-size: 20px;
-  letter-spacing: -0.02em;
-}
-
-.tecnologia-lista span:last-child {
-  color: #86a795;
-  font-size: 13px;
-}
-
-.enlace-proyecto {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 28px;
-  padding-bottom: 3px;
-  border-bottom: 1px solid var(--lima);
-  color: var(--lima);
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 160ms ease, border-color 160ms ease;
-}
-
-.enlace-proyecto:hover {
-  border-color: var(--crema);
-  color: var(--crema);
-}
-
 .preguntas {
   padding: clamp(80px, 11vw, 132px) 0;
 }
@@ -1531,8 +1471,7 @@ h2 span {
   }
 
   .problema-cabeza,
-  .como-cabeza,
-  .tecnologia-cabeza {
+  .como-cabeza {
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
   }
@@ -1602,7 +1541,7 @@ h2 span {
 }
 
 @media (max-width: 820px) {
-  .nav-links a:not(.nav-github) {
+  .nav-links a:not(.nav-cta) {
     display: none;
   }
 
@@ -1610,14 +1549,6 @@ h2 span {
     gap: 0;
   }
 
-  .tecnologia-lista li {
-    grid-template-columns: 90px minmax(0, 1fr);
-    gap: 8px 20px;
-  }
-
-  .tecnologia-lista span:last-child {
-    grid-column: 2;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1655,7 +1586,7 @@ h2 span {
     font-size: 16px;
   }
 
-  .nav-github {
+  .nav-cta {
     padding: 7px 10px;
   }
 
@@ -1705,8 +1636,7 @@ h2 span {
   }
 
   .problema-cabeza p,
-  .como-cabeza p,
-  .tecnologia-cabeza p {
+  .como-cabeza p {
     font-size: 15px;
   }
 
@@ -1765,16 +1695,6 @@ h2 span {
 
   .telefono {
     padding: 22px 18px 16px;
-  }
-
-  .tecnologia-lista li {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 4px;
-    padding: 18px 0;
-  }
-
-  .tecnologia-lista span:last-child {
-    grid-column: auto;
   }
 
   .faq details p {

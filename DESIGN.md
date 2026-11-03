@@ -57,7 +57,7 @@ sobre crema usan `--tinta-suave` o más oscuro, nunca grises claros.
 - **Asientos de funciones:** etiqueta mono dorada a la izquierda, título y texto a la derecha,
   reglas horizontales.
 - **Pasos:** tres columnas con número, título y texto; en móvil se apilan con línea superior.
-- **Privacidad:** banda crema con diagrama teléfono / nube opcional y lista de garantías.
+- **Privacidad:** banda crema con diagrama teléfono / hoja opcional y lista de garantías.
 - **FAQ:** `details` nativos con signo más dibujado en CSS; la primera respuesta abre por defecto.
 - **Cierre:** banda lima a sangre con titular grande, botón verde y enlace de vuelta.
 
@@ -82,4 +82,4 @@ sobre crema usan `--tinta-suave` o más oscuro, nunca grises claros.
 
 Los datos del recibo y de la comparación son ejemplos ficticios y están rotulados. No se inventan
 testimonios, métricas, precios ni descargas. La privacidad se describe como comportamiento por
-defecto: la nube y Google Sheets son opcionales.
+defecto: tu hoja de Google Sheets es opcional.

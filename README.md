@@ -49,8 +49,8 @@ DESIGN.md             Sistema visual implementado
 
 - Los datos de la demostración son ficticios y están marcados como tales.
 - No hay testimonios, métricas, precios ni enlaces de descarga inventados.
-- Las afirmaciones de privacidad corresponden al comportamiento por defecto de la app: la nube y
-  Google Sheets son opcionales.
+- Las afirmaciones de privacidad corresponden al comportamiento por defecto de la app: tu hoja de
+  Google Sheets es opcional.
 - Enlaces: el proyecto vive en [GitHub](https://github.com/Sebastian-Buitrag0).
 
 ## Accesibilidad

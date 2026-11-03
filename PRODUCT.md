@@ -30,16 +30,15 @@ mano y pueda revisar cualquier movimiento en segundos.
 
 Un asistente local, no un banco ni una app de finanzas genérica: captura las notificaciones que ya
 llegan al teléfono, aplica reglas propias y resuelve el 4x1000 y el mes de presupuesto como los
-maneja una persona en Colombia. Los datos viven en SQLite; la nube es opcional.
+maneja una persona en Colombia. Los datos viven en el teléfono; la nube es opcional.
 
 ## Operating Context
 
 - Android, en español, montos en pesos colombianos (COP) guardados en centavos, hora de Bogotá.
 - El mes de presupuesto puede empezar el día de pago (28 por defecto).
 - El 4x1000 se estima al 0,4 % y se corrige cuando llega el cargo real.
-- Google Sheets es opcional y solo recibe filas confirmadas; la réplica en PostgreSQL es
-  autoalojada y también opcional.
-- La app procesa en primer plano; si está cerrada, las notificaciones esperan en una cola local.
+- Google Sheets es opcional y solo recibe filas confirmadas; la nube es opcional.
+- La app procesa en primer plano; si está cerrada, las notificaciones esperan en el teléfono hasta que la abras.
 
 ## Capabilities and Constraints
 
@@ -49,7 +48,6 @@ maneja una persona en Colombia. Los datos viven en SQLite; la nube es opcional.
 - Cuentas, saldos, traslados, 4x1000, presupuestos, metas, préstamos y pagos fijos.
 - Exportación CSV; bloqueo con huella o PIN.
 - Google Sheets: solo agrega filas en las columnas A–D; nunca edita ni borra.
-- Sincronización opcional con un backend .NET 10 + PostgreSQL.
 - No lee SMS. No hay app publicada en tiendas. No hay datos reales en los repositorios.
 
 ## Brand Commitments
@@ -73,7 +71,7 @@ maneja una persona en Colombia. Los datos viven en SQLite; la nube es opcional.
 1. **Privado por defecto.** Lo que llega al teléfono se queda en el teléfono.
 2. **Automático, pero revisable.** La app propone; la persona confirma o crea una regla.
 3. **La plata es exacta.** Centavos, 4x1000 y saldos se explican solos; nunca se duplican.
-4. **Funciona sin conexión.** La nube y el Sheet son extras, no requisitos.
+4. **Funciona sin conexión.** Tu hoja es un extra, no un requisito.
 5. **Menos ruido, más claridad.** Cada notificación se convierte en una entrada legible.
 
 ## Accessibility & Inclusion
