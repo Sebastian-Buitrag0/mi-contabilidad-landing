@@ -1,0 +1,3 @@
+root: site
+gzip: on
+directory: off
