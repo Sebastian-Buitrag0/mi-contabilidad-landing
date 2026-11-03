@@ -43,7 +43,7 @@ maneja una persona en Colombia. Los datos viven en SQLite; la nube es opcional.
 
 ## Capabilities and Constraints
 
-- Parsers para Nequi, BBVA, Google Wallet, Pibank, RappiCard y un parser genérico.
+- Parsers propios para Nequi, BBVA y Google Wallet; parser genérico para Pibank, RappiCard y las demás.
 - Bandeja de pendientes con tres categorías sugeridas, notificación local y creación de reglas.
 - Dedupe por monto, cuenta y comercio dentro de dos minutos.
 - Cuentas, saldos, traslados, 4x1000, presupuestos, metas, préstamos y pagos fijos.
